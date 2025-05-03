@@ -1,0 +1,145 @@
+import Request from './request'
+//单服务版本
+const Api={
+    checkCode:'/account/checkCode',//验证码
+    login:'/account/login',//登录
+    logout:'/account/logout',//退出
+    register:'/account/register',//注册
+    sendEmailCode:'/account/sendEmailCode',//发送邮箱验证码
+    autoLogin:'/account/autoLogin',//自动登录
+    getUserCountInfo:'/account/getUserCountInfo',//获取用户统计信息
+    sourcePath:'/api/file/getResource?sourceName=',//获取资源路径
+    loadAllCatagory:'/category/loadAllCategory',//加载所有分类
+    getSysSetting:'/setting/getSysSetting',//获取系统设置
+    //发布视频
+    preUploadVideo:'/file/preUploadVideo',//预上传视频
+    uploadVideo:'/file/uploadVideo',//上传视频
+    delUploadVideo:'/file/delUploadVideo',//删除上传视频
+    postVideo:'/ucenter/postVideo',//发布视频
+    saveVideoInteraction:'/ucenter/saveVideoInteraction',//保存视频互动
+    getVideoByVideoId:'/ucenter/getVideoByVideoId',//获取视频详情
+    loadUcnterVideoList:'/ucenter/loadUcenterVideoList',//加载用户视频列表
+    getUcenterVideoCountInfo:'/ucenter/getUcenterVideoCountInfo',//获取用户视频统计信息
+    uploadImage:'/file/uploadImage',//上传图片
+    //发布视频
+    preUploadVideo:'/file/preUploadVideo',//预上传视频
+    uploadVideo:'/file/uploadVideo',//上传视频
+    delUploadVideo:'/file/delUploadVideo',//删除上传视频
+    postVideo:'/ucenter/postVideo',//发布视频
+    saveVideoInteraction:'/ucenter/saveVideoInteraction',//保存视频互动
+    getVideoByVideoId:'/ucenter/getVideoByVideoId',//获取视频详情
+    loadUcnterVideoList:'/ucenter/loadUcenterVideoList',//加载用户视频列表
+    getUcenterVideoCountInfo:'/ucenter/getUcenterVideoCountInfo',//获取用户视频统计信息
+    uploadImage:'/file/uploadImage',//上传图片
+    //个人中心
+    ucloadAllVideo:'/ucenter/loadAllVideo',//加载所有视频
+    ucloadComment:'/ucenter/loadComment',//加载评论
+    ucDelComment:'/ucenter/delComment',//删除评论
+    ucloadDanmu:'/ucenter/loadDanmu',//加载弹幕
+    ucDelComment:'/ucenter/delDanmu',//删除弹幕
+    ucGetActualTimeStatisticsInfo:'/ucenter/getActualTimeStatisticsInfo',//获取实际时间统计信息
+    getWeekStatisticsInfo:'/ucenter/getWeekStatisticsInfo',//获取周统计信息
+    ucDeleteVideo:'/ucenter/deleteVideo',//删除视频
+    //获取视频列表
+    loadRecommendVideo:'/video/loadRecommendVideo',//加载推荐视频
+    loadVideo:'/video/loadVideo',//加载视频
+    LoadVideoPList:'/video/loadVideoPList',//加载视频
+    getVideoResource:'/api/file/videoResource',//获取视频资源
+    getVideoInfo:'/video/getVideoInfo',//获取视频信息
+    //评论
+    loadComment:'/comment/loadComment',//加载评论
+    postComment:'/comment/postComment',//发布评论
+    userDelComment:'/comment/userDelComment',//删除评论
+    userTopComment:'/comment/userTopComment',//置顶评论
+    userCancelTopComment:'/comment/userCancelTopComment',//取消置顶评论
+    //弹幕
+    loadDanmu:'/danmu/loadDanmu',//加载弹幕
+    postDanmu:'/danmu/postDanmu',//发布弹幕
+    //上报在线人数
+    reportVideoPlayOnline:'/video/reportVideoPlayOnline',//上报视频播放在线人数
+    //点赞，评论，投币，收藏
+    userAction:'/userAction/doAction',
+    //播放历史
+    playHistory:'/history/loadHistory',
+    delHistory:'/history/delHistory',
+    cleanHistory:'/history/cleanHistory',
+    //消息
+    getNoReadCount:'/message/getNoReadCount',//获取未读消息数量
+    loadUserMessage:'/message/loadMessage',//加载用户消息
+    delMessage:'/message/delMessage',//删除消息
+    getNoReadCountGroup:'/message/getNoReadCountGroup',//获取未读消息分组数量
+    readAll:'/message/readAll',//标记所有消息为已读
+    //个人主页
+    uHomeUpdateUserInfo:'/uhome/updateUserInfo',//更新用户信息
+    uHomeLoadVideo:'/uhome/loadVideoList',//加载视频
+    uHomeGetUserInfo:'/uhome/getUserInfo',//获取用户信息
+    //关注
+    uHomeFocus:'/uhome/focus',//关注
+    uHomeCancelFocus:'/uhome/cancelFocus',//取消关注
+    uHomeFocusList:'/uhome/loadFocusList',//获取关注列表
+    uHomeFansList:'/uhome/loadFansList',//获取粉丝列表
+    //视频系列
+    uHomeSeriesLoadVideoSeries:'/uhome/series/loadVideoSeries',//加载所有视频系列
+    //获取系列视频
+    uHomeSeriesLoadAllVideo:'/uhome/series/loadAllVideo',
+    //保存系列
+    uHomeSeriesSaveVideoSeries:'/uhome/series/saveVideoSeries',
+    //修改系列顺序
+    uHomeSeriesChangeVideoSeriesSort:'/uhome/series/changeVideoSeriesSort',
+    //获取系列详情
+    uHomeSeriesGetVideoSeriesDetail:'/uhome/series/getVideoSeriesDetail',
+    //删除系列
+    uHomeSeriesDelVideoSeries:'/uhome/series/delVideoSeries',
+    //保存系列视频
+    uHomeSeriesSaveSeriesVideo:'/uhome/series/saveSeriesVideo',
+    //删除系列视频
+    uHomeSeriesDelSeriesVideo:'/uhome/series/delSeriesVideo',
+    //获取所有列表
+    uHomeSeriesLoadVideoSeriesWithVideo:'/uhome/series/loadVideoSeriesWithVideo',
+    //收藏列表
+    uHomeLoadCollection:'uhome/loadUserCollection',//加载收藏列表
+    //设置主题
+    saveTheme:'/uhome/saveTheme',//保存主题
+    //搜索
+    search:'/video/search',//搜索
+    getSearchKeywordTop:'/video/getSearchKeywordTop',//获取搜索热词
+    //推荐视频
+    getVideoRecommend:'/video/getVideoRecommend',//获取推荐视频
+    //热门视频
+    hotVideoList:'/video/loadHotVideoList',//获取热门视频
+
+}
+
+//上传封面
+const uploadImage=async(file,createThumbnail=false)=>{
+    let result = await Request({
+        url:Api.uploadImage,
+        params:{
+            file,
+            createThumbnail//是否创建缩略图
+        },
+    })
+    if(!result){
+        return
+    }
+    return result.data;
+}
+
+
+const doUserAction=async (config,callback)=>{
+    let result=await Request({
+        url:Api.userAction,
+        params:config,
+        showLoading:true
+    })
+    if(!result){
+        return;
+    }
+    callback()
+}
+
+export default{
+    Api,
+    uploadImage,
+    doUserAction
+}
